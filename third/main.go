@@ -8,6 +8,9 @@ type MapFunc[T any, R any] func(T) R
 
 func ParallelMap[T any, R any](in []T, fn MapFunc[T, R], workers int) []R {
 	out := make([]R, len(in))
+	if workers < 1 {
+		workers = 1
+	}
 	var wait sync.WaitGroup
 	tasks := make(chan struct {
 		a int
