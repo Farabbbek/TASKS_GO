@@ -9,8 +9,3 @@ func calculator(a, b int) {
 	fmt.Println(a + b)
 
 }
-
-func main() {
-	var a, b int
-	calculator(a, b)
-}
