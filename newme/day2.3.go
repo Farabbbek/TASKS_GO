@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func ArraySlice() {
 	//array
 	arr := [5]int{73, 98, 86, 61, 96}
 
